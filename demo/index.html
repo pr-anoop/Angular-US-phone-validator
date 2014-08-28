@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="mobileApp" lang="en">
+<head>
+	<title>Demo: Us Phone Valudation</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-controller="mainCtrl">
+	<div class="container" style="margin-top:20px;">
+		<div class="col-md-6">
+			<div class="panel panel-info">
+			    <div class="panel-heading"><strong>Usage: Angular US phone number validation</strong></div>
+				<div class="panel-body">
+					<p>This is a simple module for format US phone numbers.</p>
+					<p>Include module file in index.html file</p>
+					<pre>&lt;script src="us-phone.min.js"&gt;&lt;/script&gt;</pre>
+					<p>Inject module.</p>
+					<pre>angular.module('mobileApp', ['usPhone']);</pre>
+					<p>Usage</p>
+					<pre>&lt;input type="text" us-phone-directive  class="form-control" name="phone" id="phone" ng-model="phone" placeholder="Phone number"&gt;</pre>
+				</div>
+			</div>
+			<div class="row">
+				<a href="https://github.com/anoop-pr/Angular-Plugins/tree/master/us-phone" class="col-md-2 col-md-offset-3">
+					<img src="gitHub-download-button.png" alt="Github download button">
+				</a>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-info">
+			    <div class="panel-heading"><strong>Demo: Angular US phone number validation</strong></div>
+				<div class="panel-body">
+					<form role="form">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Phone Number</label>
+							<input type="text" us-phone-directive  class="form-control" name="phone" id="phone" ng-model="phone" placeholder="Phone number">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script type="text/javascript" src="../us-phone.min.js"></script>
+	<script type="text/javascript">
+		angular.module('mobileApp', ['usPhone']);
+
+		angular.module('mobileApp').controller('mainCtrl', ['$scope', function($scope){
+			$scope.phonenumber = '';
+		}]);
+	</script>
+</body> 
+</html>
